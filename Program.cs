@@ -9,6 +9,16 @@ namespace Calculator
             Soma();
         }
 
+
+        static void Menu()
+        {
+            Console.Clear();
+            Console.WriteLine("O que deseja fazer? ");
+            Console.WriteLine("1 - SOMA");
+            Console.WriteLine("2 - SUBTRACAO");
+            Console.WriteLine("3 - DIVISAO");
+            Console.WriteLine("4 - MULTIPLICACAO");
+        }
         static float[] Leitura()
         {
             Console.Clear();
@@ -27,6 +37,30 @@ namespace Calculator
             Console.WriteLine();
             var valores = Leitura();
             Console.WriteLine("o Resultado da soma é " + (valores[0] + valores[1]));
+            Console.WriteLine("Valeu por usar nossa App");
+        }
+        static void Subtracao()
+        {
+
+            Console.WriteLine();
+            var valores = Leitura();
+            Console.WriteLine("o Resultado da subtracao é " + (valores[0] - valores[1]));
+            Console.WriteLine("Valeu por usar nossa App");
+        }
+        static void Divisao()
+        {
+
+            Console.WriteLine();
+            var valores = Leitura();
+            Console.WriteLine("o Resultado da divisao é " + (valores[0] / valores[1]));
+            Console.WriteLine("Valeu por usar nossa App");
+        }
+        static void Multiplicacao()
+        {
+
+            Console.WriteLine();
+            var valores = Leitura();
+            Console.WriteLine("o Resultado da divisao é " + (valores[0] / valores[1]));
             Console.WriteLine("Valeu por usar nossa App");
         }
     }

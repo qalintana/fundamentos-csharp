@@ -6,7 +6,7 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
-            Soma();
+            Menu();
         }
 
 
@@ -18,6 +18,23 @@ namespace Calculator
             Console.WriteLine("2 - SUBTRACAO");
             Console.WriteLine("3 - DIVISAO");
             Console.WriteLine("4 - MULTIPLICACAO");
+            Console.WriteLine("5- Sair");
+            Console.WriteLine("--------------------");
+            Console.WriteLine("Selecione uma opção: ");
+            short res = short.Parse(Console.ReadLine());
+
+            switch (res)
+            {
+                case 1: Soma(); break;
+                case 2: Subtracao(); break;
+                case 3: Divisao(); break;
+                case 4: Multiplicacao(); break;
+                case 5: System.Environment.Exit(0); break;
+
+                default: Soma(); break;
+
+            }
+
         }
         static float[] Leitura()
         {
@@ -38,6 +55,8 @@ namespace Calculator
             var valores = Leitura();
             Console.WriteLine("o Resultado da soma é " + (valores[0] + valores[1]));
             Console.WriteLine("Valeu por usar nossa App");
+            Console.ReadKey();
+            Menu();
         }
         static void Subtracao()
         {
@@ -46,6 +65,8 @@ namespace Calculator
             var valores = Leitura();
             Console.WriteLine("o Resultado da subtracao é " + (valores[0] - valores[1]));
             Console.WriteLine("Valeu por usar nossa App");
+            Console.ReadKey();
+            Menu();
         }
         static void Divisao()
         {
@@ -54,14 +75,18 @@ namespace Calculator
             var valores = Leitura();
             Console.WriteLine("o Resultado da divisao é " + (valores[0] / valores[1]));
             Console.WriteLine("Valeu por usar nossa App");
+            Console.ReadKey();
+            Menu();
         }
         static void Multiplicacao()
         {
 
             Console.WriteLine();
             var valores = Leitura();
-            Console.WriteLine("o Resultado da divisao é " + (valores[0] / valores[1]));
+            Console.WriteLine("o Resultado da multiplicacao é " + (valores[0] * valores[1]));
             Console.WriteLine("Valeu por usar nossa App");
+            Console.ReadKey();
+            Menu();
         }
     }
 }

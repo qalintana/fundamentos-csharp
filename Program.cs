@@ -50,7 +50,6 @@ namespace Calculator
         }
         static void Soma()
         {
-
             Console.WriteLine();
             var valores = Leitura();
             Console.WriteLine("o Resultado da soma é " + (valores[0] + valores[1]));
@@ -60,7 +59,6 @@ namespace Calculator
         }
         static void Subtracao()
         {
-
             Console.WriteLine();
             var valores = Leitura();
             Console.WriteLine("o Resultado da subtracao é " + (valores[0] - valores[1]));
